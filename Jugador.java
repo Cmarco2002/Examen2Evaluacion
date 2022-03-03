@@ -1,5 +1,7 @@
 package examen2programacion;
 
+import java.util.ArrayList;
+
 public class Jugador {
 	private String nombre;
 	private int dorsal;
@@ -12,6 +14,14 @@ public class Jugador {
 		this.dorsal = dorsal;
 		this.potenciaDisparo = potenciaDisparo;
 		this.calidadPorteria = calidadPorteria;
+		this.vidas = 2;
+	}
+	public Jugador() {
+		super();
+		this.nombre = "";
+		this.dorsal = 0;
+		this.potenciaDisparo = 0;
+		this.calidadPorteria = 0;
 		this.vidas = 2;
 	}
 	public String getNombre() {
@@ -48,5 +58,18 @@ public class Jugador {
 	public String toString() {
 		return "Jugador [nombre=" + nombre + ", dorsal=" + dorsal + ", potenciaDisparo=" + potenciaDisparo
 				+ ", calidadPorteria=" + calidadPorteria + ", vidas=" + vidas + "]";
+	}
+	public int habilidadDisparo(ArrayList<Jugador> jugadores, int jugador) {
+		int habilidadDisparo=0;
+		habilidadDisparo=jugadores.get(jugador).getPotenciaDisparo()*(int) Math.round(Math.random() * 10);
+		return habilidadDisparo;
+	}
+	public int habilidadPorteria(ArrayList<Jugador> jugadores, int jugador) {
+		int habilidadPorteria=0;
+		habilidadPorteria=jugadores.get(jugador).getCalidadPorteria()*(int) Math.round(Math.random() * 10);
+		return habilidadPorteria;
+	}
+	public void jugar(ArrayList<Jugador> jugadores, int [] orden) {
+		
 	}
 }

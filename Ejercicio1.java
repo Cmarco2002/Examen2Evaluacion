@@ -31,6 +31,23 @@ public class Ejercicio1 {
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Introduzca el número de jugadores que van a participar: ");
 		int n = entrada.nextInt();
+		int [] orden = new int[n];
 		ArrayList<Jugador> jugadores=generarJugadores(n);
+		System.out.println("Generando orden de participación");
+		System.out.println();
+		for(int i = 0;i < orden.length;i++) {
+			orden[i]=i;
+		}
+		for(int i = 0;i < orden.length-1;i++) {
+			int a=(int) Math.round(Math.random() * n);
+			int b=orden[i];
+			orden[i]=orden[a];
+			orden[a]=b;
+		}
+		for(int i = 0;i < orden.length;i++) {
+			System.out.println(orden[i]);
+		}
+		Jugador jugar =new Jugador();
+		jugar.jugar(jugadores, orden);
 	}
 }
