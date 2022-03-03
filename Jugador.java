@@ -70,6 +70,11 @@ public class Jugador {
 		return habilidadPorteria;
 	}
 	public void jugar(ArrayList<Jugador> jugadores, int [] orden) {
-		
+		int[] habilidadPorteria= new int[jugadores.size()];
+		int[] habilidadDisparo= new int[jugadores.size()];
+		for(int i = 0; i<jugadores.size();i++) {
+			habilidadPorteria[i]=habilidadPorteria(jugadores,orden[i]);
+			habilidadDisparo[i]=habilidadDisparo(jugadores,orden[i]);
+		}
 	}
 }

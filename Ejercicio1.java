@@ -44,9 +44,6 @@ public class Ejercicio1 {
 			orden[i]=orden[a];
 			orden[a]=b;
 		}
-		for(int i = 0;i < orden.length;i++) {
-			System.out.println(orden[i]);
-		}
 		Jugador jugar =new Jugador();
 		jugar.jugar(jugadores, orden);
 	}
