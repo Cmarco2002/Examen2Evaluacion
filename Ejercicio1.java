@@ -6,6 +6,10 @@ import java.util.Scanner;
 import examen2programacion.Jugador;
 
 public class Ejercicio1 {
+	/**
+	 * Pre:---
+	 * Post: En este método se generan los jugadores.
+	 */
 	public static ArrayList<Jugador> generarJugadores(int numeroJugadores){
 		ArrayList<Jugador> jugadores=new ArrayList<Jugador>();
 		String nombre;
@@ -27,6 +31,10 @@ public class Ejercicio1 {
 		}
 		return jugadores;
 	}
+	/**
+	 * Pre:---
+	 * Post: Este programa sirve para simular un rapido de futbol.
+	 */
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Introduzca el número de jugadores que van a participar: ");
@@ -34,7 +42,6 @@ public class Ejercicio1 {
 		int [] orden = new int[n];
 		ArrayList<Jugador> jugadores=generarJugadores(n);
 		System.out.println("Generando orden de participación");
-		System.out.println();
 		for(int i = 0;i < orden.length;i++) {
 			orden[i]=i;
 		}

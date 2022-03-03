@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejercicio3 {
+	/**
+	 * Pre:---
+	 * Post: Te lee el fichero y te cuenta las palabras.
+	 */
 	public static ArrayList<String> informacionVideojuegos() {
 		ArrayList<String> consolas = new ArrayList<String>();
 		String nombre = "C:\\Users\\Carlos\\Desktop\\ventasVideojuegos.csv";
@@ -28,7 +32,10 @@ public class Ejercicio3 {
 		}
 		return consolas;
 	}
-
+	/**
+	 * Pre:---
+	 * Post: Este programa te dice que consolas se nombran en el fichero.
+	 */
 	public static void main(String[] args) {
 		System.out.println(informacionVideojuegos());
 	}

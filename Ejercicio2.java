@@ -5,6 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Ejercicio2 {
+	/**
+	 * Pre:---
+	 * Post: Se calcula cuantas palabras son más largas.
+	 */
 	public static int palabrasMasLargasQue(int longitud) {
 		String nombre = "C:\\Users\\Carlos\\Desktop\\textoExamen.txt";
 		File file = new File(nombre);
@@ -36,6 +40,11 @@ public class Ejercicio2 {
 		}
 		return contador;
 	}
+	/**
+	 * Pre:---
+	 * Post: Este programa lee un fichero y saca el numero de palabras que son más largas que 
+	 * lo que ha introducido el usuario.
+	 */
 	public static void main(String[] args) {
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Introduzca la longitud que quiere que tenga la palabra: ");
